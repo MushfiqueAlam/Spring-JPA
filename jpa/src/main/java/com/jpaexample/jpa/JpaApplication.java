@@ -76,11 +76,12 @@ public class JpaApplication {
 //			});
 
 		//Delete the user data
-		userReposetory.deleteById(1);
-		System.out.println("Deleted user by Id");
+//			userReposetory.deleteById(52);
+//		System.out.println("Deleted user by Id");
 
-
-
+		//Find User By their entity example name,city etc.
+		List<User> user = userReposetory.findByName("Mushfique Alam");
+		user.forEach(user3 -> System.out.println(user3));
 
 
 		System.out.println("Successfully data stored");
